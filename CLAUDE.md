@@ -31,3 +31,7 @@ Every skill that dispatches a subagent says to start it with a fresh context win
 ### Triage labels
 
 Canonical names, unchanged. See `docs/agents/triage-labels.md`. Issues are judged against [`SCOPE.md`](./SCOPE.md).
+
+## Fork: loading the skills in other projects
+
+This fork (`PipelineSurfer/skills`) is attached as a side repo to the user's projects so its skills load there. Claude Code only reads `.claude/skills/`, so that folder holds relative symlinks to exactly the skills in `.claude-plugin/plugin.json`, built by `node scripts/sync-claude-skills.mjs` (`--check` reports drift). Re-run it and commit after every pull from upstream (`mattpocock/skills`) or any change to `plugin.json`. Everything else in this file describes upstream's own conventions and only matters when editing this repo.
