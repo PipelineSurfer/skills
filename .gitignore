@@ -1,2 +1,4 @@
 node_modules
-.claude
+# Fork: keep .claude/ ignored except the skills folder built by scripts/sync-claude-skills.mjs
+.claude/*
+!.claude/skills/
